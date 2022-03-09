@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-             binding.todos.setOnClickListener {
-                 val intent = Intent (this, TodosUsersActivity::class.java)
-                 startActivity(intent)
-             }
+        binding.todos.setOnClickListener {
+            val intent = Intent (this, TodosUsersActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.chicos.setOnClickListener {
             val intent = Intent (this, ChicosUsersActivity::class.java)
@@ -28,5 +28,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent (this, ChicasUsersActivity::class.java)
             startActivity(intent)
         }
-          }
     }
+}
