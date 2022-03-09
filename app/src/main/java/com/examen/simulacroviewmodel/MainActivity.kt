@@ -23,5 +23,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent (this, ChicosUsersActivity::class.java)
             startActivity(intent)
         }
+
+        binding.chicas.setOnClickListener {
+            val intent = Intent (this, ChicasUsersActivity::class.java)
+            startActivity(intent)
+        }
           }
     }
