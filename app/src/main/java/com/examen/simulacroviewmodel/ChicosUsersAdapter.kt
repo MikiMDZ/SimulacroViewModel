@@ -5,22 +5,21 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.examen.simulacroviewmodel.databinding.ItemUsuarioBinding
 
-class TodosUsersAdapter(var personas: MutableList<Result>) :
-    RecyclerView.Adapter<TodosUsersAdapter.TextoViewHolder>() {
-
+class ChicosUsersAdapter(var personas: MutableList<Result>) :
+    RecyclerView.Adapter<ChicosUsersAdapter.TextoViewHolder>() {
 
     class TextoViewHolder(var itemBinding: ItemUsuarioBinding) :
         RecyclerView.ViewHolder(itemBinding.root)
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChicosUsersAdapter.TextoViewHolder {
         val binding =
             ItemUsuarioBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TextoViewHolder(binding)
+        return ChicosUsersAdapter.TextoViewHolder(binding)
 
     }
 
-    override fun onBindViewHolder(holder: TextoViewHolder, pos: Int) {
+    override fun onBindViewHolder(holder: ChicosUsersAdapter.TextoViewHolder, pos: Int) {
 
         holder.itemBinding.nombre.text = personas[pos].name.title
         holder.itemBinding.apellido.text = personas[pos].name.first
@@ -30,4 +29,4 @@ class TodosUsersAdapter(var personas: MutableList<Result>) :
         return personas.size
     }
 
-}
+    }
